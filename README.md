@@ -23,3 +23,5 @@ My main reason for using Poetry over Pipenv & virtualenv: Poetry utilizes `pypro
 * `pyproject.toml` w/ basic project setup. Additionally, `pyprojectTEST.toml` is a .toml I used to learn Poetry.
 * .gitignore = [GitHub .gitignore template for Python](https://github.com/github/gitignore/blob/4488915eec0b3a45b5c63ead28f286819c0917de/Python.gitignore) w/ following change(s):
     * Changed `.venv` to `.venv/*` + `!.venv/.gitkeep`. With default behavior, this forces Pipenv to use `./.venv/` to house venv, instead of default venv location on user's system.
+    * Commented out `dist\` in to allow whl & sdist to be included for demo & learning purposes.
+* ^ `./dist/`holds `mypkg` whl & sdist. Can be installed to show how src layout forces dev to use installed version of pkg: changing code in `./src/mypkg/` won't impact installed mypkg version.
