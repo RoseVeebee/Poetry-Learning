@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "mypkg"
+version = "0.1.0"
+description = "Learning to use Poetry."
+authors = ["Rose Veebee <veebeerose@gmail.com>"]
+readme = "README.md"
+packages = [{include = "mypkg", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requires = {version = "^0.10.5", optional = true}
+mysqlclient = {version = "^2.2.4", optional = true}
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+numpy = "^1.26.4"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.extras]
+my_extras = ["pytest", "numpy"]
+extra1 = ["requires"]
+extra2 = ["numpy",]
+extra3 = ["requires", "numpy"]
+extra4 = ["mysqlclient"]

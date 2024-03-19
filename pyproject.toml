@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "mypkg"
+version = "0.1.0"
+description = "Learning to use Poetry."
+authors = ["Rose Veebee <veebeerose@gmail.com>"]
+readme = "README.md"
+packages = [{include = "mypkg", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
